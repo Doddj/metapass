@@ -7,19 +7,28 @@
 
 import SwiftUI
 
+
 struct MyButtonStyle: ButtonStyle {
-    @State private var selected = false
+@State private var selected = false
   func makeBody(configuration: Self.Configuration) -> some View {
     configuration.label
-      .padding()
+        .padding(10.0)
       .foregroundColor(.white)
-        .background(configuration.isPressed ? Color.purple : Color.blue.opacity(0))
-      .cornerRadius(8.0)
+        .cornerRadius(20.0)
+//        .background(configuration.isPressed ? Color.blue : Color.blue.opacity(0))
+
   }
 
 }
 
+
+
 struct ContentView: View {
+    @State var selectedSubView: Int = 0
+    @State var holdingBtnSelected: Bool = true
+    @State var activityBtnSelected: Bool = false
+    @State var collectionBtnSelected: Bool = false
+
     var body: some View {
         ZStack{
             Color(.black)
@@ -67,36 +76,86 @@ struct ContentView: View {
                                 .frame(width: 363, height: 43, alignment: .leading)
                         HStack{
                             //Holdings
-                            Button(action:{}){
+                            Button(action:{
+                                self.selectedSubView = 0
+                                self.collectionBtnSelected = false
+                                self.holdingBtnSelected = true
+                                self.activityBtnSelected = false
+                            })
+                            {
                                 Text("Holdings").font(.custom("Roboto Medium", size: 20)).foregroundColor(Color(.white)).multilineTextAlignment(.center)
+
                             }
+                            .background(Color(holdingBtnSelected ? .blue : #colorLiteral(red: 0.2750000059604645, green: 0.2750000059604645, blue: 0.2750000059604645, alpha: 1)))
                             .buttonStyle(MyButtonStyle())
+
                             //Text 2
-                            Button(action:{}){
+                            Button(action:{
+                                self.selectedSubView = 1
+                                self.collectionBtnSelected = false
+                                self.holdingBtnSelected = false
+                                self.activityBtnSelected = true
+                            }){
                                 Text("Activity").font(.custom("Roboto Medium", size: 20)).foregroundColor(Color(.white)).multilineTextAlignment(.center)
                             }
+                            .background(Color(activityBtnSelected ? .blue : #colorLiteral(red: 0.2750000059604645, green: 0.2750000059604645, blue: 0.2750000059604645, alpha: 1)))
                             .buttonStyle(MyButtonStyle())
+
                             //Text 3
-                            Button(action:{}){
+                            Button(action:{
+                                self.selectedSubView = 2
+                                self.collectionBtnSelected = true
+                                self.holdingBtnSelected = false
+                                self.activityBtnSelected = false
+                            }){
                                 Text("Collection").font(.custom("Roboto Medium", size: 20)).foregroundColor(Color(.white)).multilineTextAlignment(.center)
                             }
+                            .background(Color(collectionBtnSelected ? .blue : #colorLiteral(red: 0.2750000059604645, green: 0.2750000059604645, blue: 0.2750000059604645, alpha: 1)))
                             .buttonStyle(MyButtonStyle())
+
                         }
                     }
-
+                    
 
                 }
-                ZStack(alignment: .topLeading){
-                    RoundedRectangle(cornerRadius: 15)
-                        .fill(Color(hue: 1.0, saturation: 0.022, brightness: 0.167))
-                        .frame(height:350)
-                    VStack{
-                        Text("$45,000").fontWeight(.medium).foregroundColor(.white).lineLimit(nil)
-                    }
-                    .padding()
-    
+                if(selectedSubView==0){
+                    HoldingsSubView()
+                }
+                else if(selectedSubView==1){
+                    ActivitiesSubView()
+                }
+                else if(selectedSubView==2){
+                    CollectionSubView()
+                }
+                else{
+                    HoldingsSubView()
                 }
                 Spacer()
+                Rectangle()                            .fill(Color(.black))
+                    .frame(width: 363, height: 43, alignment: .leading)
+                HStack{
+                    ZStack{
+                        Rectangle()
+                            .fill(Color.clear)
+                            .frame(width:363/2, height:43)
+                        Image(systemName: "wallet.pass.fill").resizable()
+                            .foregroundColor(.white)
+                            .frame(width: 30, height: 30).padding()
+                    }
+                    
+                    ZStack{
+                        Rectangle()
+                            .fill(Color.clear)
+                            .frame(width:363/2, height:43)
+                        Image(systemName: "person.2.fill").resizable()
+                            .foregroundColor(.white)
+                            .frame(width: 30, height: 30)
+                            .padding()
+                    }
+
+                }
+                .frame(alignment: .leading)
+                .padding()
             }
 
         }

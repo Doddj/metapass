@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MakeTransactionView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var body: some View {
         ZStack{
         Rectangle()
@@ -18,6 +19,18 @@ struct MakeTransactionView: View {
                     startPoint: UnitPoint(x: 0.6999999889392746, y: -0.09000000505594842),
                     endPoint: UnitPoint(x: 0.3900000036111433, y: 2.299999917540763))).edgesIgnoringSafeArea(.all)
             VStack{
+                HStack{
+                    Button(action: {
+                            self.presentationMode.wrappedValue.dismiss()
+                    }){
+                    Image(systemName: "arrow.backward").font(.custom("Avenir Roman", size: 40)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                    }.padding(.leading, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                }
+                .frame(
+                    minWidth: 0,
+                    maxWidth: .infinity,
+                    alignment: .leading
+                  )
                 NavigationLink(destination: BuyView()) {
                     VStack{
                         Text("Buy or Sell").font(.custom("Avenir Roman", size: 40)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
@@ -54,7 +67,7 @@ struct MakeTransactionView: View {
                     }.padding()
                 }
             }
-        }
+        }.navigationBarHidden(true)
     }
 }
 

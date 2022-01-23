@@ -10,13 +10,15 @@ import SwiftUI
 struct FooterView: View {
     var body: some View {
         HStack{
+            NavigationLink(destination:SavingsView()){
             ZStack{
                 Rectangle()
                     .fill(Color.clear)
-                    .frame(width:363/2, height:43)
+                    .frame(width:130, height:43)
                 Image(systemName: "wallet.pass.fill").resizable()
                     .foregroundColor(.white)
                     .frame(width: 30, height: 25).padding()
+            }
             }
             NavigationLink(destination: MakeTransactionView()) {
                 Circle()
@@ -28,18 +30,16 @@ struct FooterView: View {
                             endPoint: UnitPoint(x: 0.3900000036111433, y: 2.299999917540763)))
                 .frame(width: 55, height: 55)
             }.navigationBarBackButtonHidden(true)
-            //                            }
-            //Ellipse 6
-
+            NavigationLink(destination:CommunityView()){
             ZStack{
                 Rectangle()
                     .fill(Color.clear)
-                    .frame(width:363/2, height:43)
+                    .frame(width:130, height:43)
                 Image(systemName: "person.2.fill").resizable()
                     .foregroundColor(.white)
                     .frame(width: 30, height: 25)
                     .padding()
-
+            }
             }
         }
         .frame(alignment: .leading)

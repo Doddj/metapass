@@ -145,19 +145,20 @@ struct BuyView: View {
                         }
                     }
                 }
-
-                //review button
-                ZStack{
-                    //Rectangle 66
-                    RoundedRectangle(cornerRadius: 100)
-                        .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                    .frame(width: 305, height: 66)
-                    .opacity(0.3)
-                    
-                    //REVIEW
-                    Text("REVIEW").font(.custom("Avenir Medium", size: 25)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).multilineTextAlignment(.center)
+                NavigationLink(destination: ReviewPageView()){
+                    //review button
+                    ZStack{
+                        //Rectangle 66
+                        RoundedRectangle(cornerRadius: 100)
+                            .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                        .frame(width: 305, height: 66)
+                        .opacity(0.3)
+                        
+                        //REVIEW
+                        Text("REVIEW").font(.custom("Avenir Medium", size: 25)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).multilineTextAlignment(.center)
+                    }
+                    .padding(.top, 40.0)
                 }
-                .padding(.top, 40.0)
             }.padding(.top)
         }.navigationBarHidden(true)
     }

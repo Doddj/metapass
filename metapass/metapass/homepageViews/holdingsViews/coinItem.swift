@@ -9,6 +9,8 @@ import SwiftUI
 
 struct coinItem: View {
     var body: some View {
+        NavigationLink(
+            destination: CoinDetailsView()){
         HStack {
             ZStack(alignment: .leading){
                 //Base (Try to center this)
@@ -41,6 +43,7 @@ struct coinItem: View {
                     }
                 }
             }
+        }
         }
     }
 }

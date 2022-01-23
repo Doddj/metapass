@@ -1,13 +1,13 @@
 //
-//  BankingView.swift
+//  ReviewPageView.swift
 //  metapass
 //
-//  Created by Jordan Stone on 1/4/22.
+//  Created by Jordan Stone on 1/19/22.
 //
 
 import SwiftUI
 
-struct BankingView: View {
+struct ReviewPageView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var body: some View {
         ZStack{
@@ -25,7 +25,8 @@ struct BankingView: View {
                     }){
                     Image(systemName: "arrow.backward").font(.custom("Avenir Roman", size: 40)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
                     }.padding(.leading, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                    Text("Bank").font(.custom("Avenir Roman", size: 40)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).multilineTextAlignment(.center)
+                        Text("Review").font(.custom("Avenir Roman", size: 40)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).multilineTextAlignment(.center)
+
                 }
                 .frame(
                     minWidth: 0,
@@ -33,28 +34,29 @@ struct BankingView: View {
                     alignment: .leading
                   )
                 .padding(.top, 20)
+                Text("Buy or sell crypto with cash").font(.custom("Avenir Light", size: 20)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
                 Spacer()
-                NavigationLink(destination: ReviewPageView()){
-                //review button
-                ZStack{
-                    //Rectangle 66
-                    RoundedRectangle(cornerRadius: 100)
-                        .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                    .frame(width: 305, height: 66)
-                    .opacity(0.3)
-                    
-                    //REVIEW
-                    Text("REVIEW").font(.custom("Avenir Medium", size: 25)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).multilineTextAlignment(.center)
+                NavigationLink(destination: homepageView()){
+                    //review button
+                    ZStack{
+                        //Rectangle 66
+                        RoundedRectangle(cornerRadius: 100)
+                            .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                        .frame(width: 305, height: 66)
+                        .opacity(0.3)
                         
-                }.padding(.bottom, 30)
+                        //REVIEW
+                        Text("BUY").font(.custom("Avenir Medium", size: 25)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).multilineTextAlignment(.center)
+                            
+                    }.padding(.bottom, 30)
                 }
             }
         }.navigationBarHidden(true)
     }
 }
 
-struct BankingView_Previews: PreviewProvider {
+struct ReviewPageView_Previews: PreviewProvider {
     static var previews: some View {
-        BankingView()
+        ReviewPageView()
     }
 }

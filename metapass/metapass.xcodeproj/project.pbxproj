@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4283C882797F0ED0022915F /* ReviewPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4283C872797F0ED0022915F /* ReviewPageView.swift */; };
 		B449212E277C411D0091A9FE /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B449212D277C411D0091A9FE /* FooterView.swift */; };
 		B4492131277C45A10091A9FE /* MakeTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4492130277C45A10091A9FE /* MakeTransactionView.swift */; };
 		B4492133277E6F380091A9FE /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4492132277E6F380091A9FE /* HeaderView.swift */; };
@@ -17,6 +18,9 @@
 		B449214127841CFD0091A9FE /* SwapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B449214027841CFD0091A9FE /* SwapView.swift */; };
 		B449214427841D1C0091A9FE /* EarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B449214327841D1C0091A9FE /* EarnView.swift */; };
 		B449214727841D510091A9FE /* BankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B449214627841D510091A9FE /* BankingView.swift */; };
+		B45080F3279CA02B00704520 /* CoinDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45080F2279CA02A00704520 /* CoinDetailsView.swift */; };
+		B45080F5279CB04800704520 /* SavingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45080F4279CB04800704520 /* SavingsView.swift */; };
+		B45080F7279CB0BC00704520 /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45080F6279CB0BC00704520 /* CommunityView.swift */; };
 		B478394B27627E8A001AA431 /* HoldingsSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B478394A27627E8A001AA431 /* HoldingsSubView.swift */; };
 		B478394D27628068001AA431 /* ActivitiesSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B478394C27628068001AA431 /* ActivitiesSubView.swift */; };
 		B478394F2762A404001AA431 /* CollectionSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B478394E2762A404001AA431 /* CollectionSubView.swift */; };
@@ -55,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B4283C872797F0ED0022915F /* ReviewPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPageView.swift; sourceTree = "<group>"; };
 		B449212D277C411D0091A9FE /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		B4492130277C45A10091A9FE /* MakeTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeTransactionView.swift; sourceTree = "<group>"; };
 		B4492132277E6F380091A9FE /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -65,6 +70,9 @@
 		B449214027841CFD0091A9FE /* SwapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapView.swift; sourceTree = "<group>"; };
 		B449214327841D1C0091A9FE /* EarnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarnView.swift; sourceTree = "<group>"; };
 		B449214627841D510091A9FE /* BankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingView.swift; sourceTree = "<group>"; };
+		B45080F2279CA02A00704520 /* CoinDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsView.swift; sourceTree = "<group>"; };
+		B45080F4279CB04800704520 /* SavingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsView.swift; sourceTree = "<group>"; };
+		B45080F6279CB0BC00704520 /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
 		B478394A27627E8A001AA431 /* HoldingsSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingsSubView.swift; sourceTree = "<group>"; };
 		B478394C27628068001AA431 /* ActivitiesSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesSubView.swift; sourceTree = "<group>"; };
 		B478394E2762A404001AA431 /* CollectionSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionSubView.swift; sourceTree = "<group>"; };
@@ -125,6 +133,7 @@
 				B449213C27841CCC0091A9FE /* sendViews */,
 				B449213927841BBE0091A9FE /* buyingViews */,
 				B4492130277C45A10091A9FE /* MakeTransactionView.swift */,
+				B4283C872797F0ED0022915F /* ReviewPageView.swift */,
 			);
 			path = transactionViews;
 			sourceTree = "<group>";
@@ -208,9 +217,12 @@
 				B4AD3812277B930900590A76 /* homepageSubviews */,
 				B4AD3810277B913D00590A76 /* homepageView.swift */,
 				B449212D277C411D0091A9FE /* FooterView.swift */,
+				B45080F4279CB04800704520 /* SavingsView.swift */,
 				B4492134277E6F9E0091A9FE /* SocialMediaHeaderView.swift */,
+				B45080F6279CB0BC00704520 /* CommunityView.swift */,
 				B4492132277E6F380091A9FE /* HeaderView.swift */,
 				B4492137277E729E0091A9FE /* SubviewBar.swift */,
+				B45080F2279CA02A00704520 /* CoinDetailsView.swift */,
 			);
 			path = homepageViews;
 			sourceTree = "<group>";
@@ -415,8 +427,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4C45755275869D30012C257 /* AppDelegate.swift in Sources */,
+				B4283C882797F0ED0022915F /* ReviewPageView.swift in Sources */,
 				B449212E277C411D0091A9FE /* FooterView.swift in Sources */,
 				B4492135277E6F9E0091A9FE /* SocialMediaHeaderView.swift in Sources */,
+				B45080F5279CB04800704520 /* SavingsView.swift in Sources */,
+				B45080F7279CB0BC00704520 /* CommunityView.swift in Sources */,
 				B4AD380E2779168B00590A76 /* ActivityItem.swift in Sources */,
 				B449214127841CFD0091A9FE /* SwapView.swift in Sources */,
 				B4AD3816277B947800590A76 /* coins.swift in Sources */,
@@ -430,6 +445,7 @@
 				B4AD381C277B96E300590A76 /* coinItem.swift in Sources */,
 				B449214427841D1C0091A9FE /* EarnView.swift in Sources */,
 				B478394F2762A404001AA431 /* CollectionSubView.swift in Sources */,
+				B45080F3279CA02B00704520 /* CoinDetailsView.swift in Sources */,
 				B4AD3818277B952900590A76 /* Savings.swift in Sources */,
 				B478394D27628068001AA431 /* ActivitiesSubView.swift in Sources */,
 				B4AD381A277B969200590A76 /* SavingItem.swift in Sources */,
